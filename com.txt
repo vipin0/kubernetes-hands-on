@@ -1,0 +1,1436 @@
+    1  gh repo clone romkatv/powerlevel10k $ZSH_CUSTOM/themes/powerlevel10k
+    2  zsh
+    3  gh repo clone romkatv/powerlevel10k $ZSH_CUSTOM/themes/powerlevel10k
+    4  git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+    5  ZSH_THEME="powerlevel10k/powerlevel10k"
+    6  p10k configure
+    7  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k\necho 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+    8  echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+    9  p10k configure
+   10  bash
+   11  clear
+   12  pwd
+   13  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting\ngit clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions\n
+   14  vi ~/.zshrc
+   15  vi ~/.bashrc
+   16  clear
+   17  ls
+   18  clear
+   19  printenv
+   20  clear
+   21  cd assignments
+   22  ls
+   23  clear
+   24  cd 2/asg2
+   25  ls
+   26  cd php-app
+   27  ls
+   28  clear
+   29  sudo yum install font-fira-code
+   30  clear
+   31  ls
+   32  clear
+   33  pwd
+   34  clear
+   35  la
+   36  clear
+   37  ps
+   38  htop
+   39  clear
+   40  cd assignments/2/asg2/php-app
+   41  ls
+   42  clear
+   43  ls
+   44  cat docker-compose.yml
+   45  clear
+   46  git status
+   47  clear
+   48  ls
+   49  ls -la
+   50  clear
+   51  pwd
+   52  clear
+   53  cd assignments/2/asg2/php-app
+   54  ls
+   55  which shell
+   56  echo $SHELL
+   57  clear
+   58  ls
+   59  sudo rm -rf php/
+   60  ls
+   61  cat README.md
+   62  ls
+   63  clear
+   64  ls
+   65  clear
+   66  sudo chshell
+   67  echo $SHELL
+   68  clear
+   69  ls
+   70  vi ~/.bashrc
+   71  ls
+   72  exit
+   73  clear
+   74  ls
+   75  pwd
+   76  clear
+   77  cd somethning/non-root
+   78  ls
+   79  clear
+   80  docker build -t non-root .
+   81  docker run --it non-root
+   82  docker run -it -p 8080:80  non-root
+   83  docker build -t non-root .
+   84  docker run -it -p 8080:80  non-root
+   85  docker build -t non-root .
+   86  docker run -it -p 8080:80  non-root
+   87  docker ps
+   88  docker exec -it 78 bash
+   89  clear
+   90  pwd
+   91  clear
+   92  ls
+   93  printf "Helloworld"
+   94  printf "Helloworld" | base64
+   95  clear
+   96  printf "Helloworld" | base64
+   97  printf "Helloworld"
+   98  clear
+   99  exit
+  100  vi ~/.bashrc
+  101  source .bashrc
+  102  clear
+  103  exit
+  104  clear
+  105  printenv
+  106  clear
+  107  exit
+  108  cd 3
+  109  ls
+  110  docker-compose up
+  111  docker networks ls
+  112  docker network ls
+  113  docker-compose up
+  114  docker network ls
+  115  printf "vipin" | docker secret create mysql_user -
+  116  printf "vipin@123" | docker secret create mysql_password -
+  117  printf "root" | docker secret create mysql_root_password -
+  118  docker secret ls
+  119  docker inspect mysql_user
+  120  docker-compose up
+  121  clear
+  122  docker secret ls
+  123  docker-compose up
+  124  docker ps
+  125  docker rm -f 3f
+  126  docker ps
+  127  docker-compose up
+  128  docker ps
+  129  docker exec -it 055 bash
+  130  docker ps
+  131  docker exec -it bd4 bash
+  132  docker-compose up
+  133  docker ps
+  134  docker exec -it 77 bash
+  135  docker-compose up
+  136  docker ps
+  137  docker execc -it 22 bash
+  138  docker exec -it 22 bash
+  139  docker stack
+  140  docker stack deploy
+  141  docker stack deploy .
+  142  docker stack deploy -c docker-compose.yml
+  143  docker stack deploy docker-compose.yml
+  144  docker stack deploy --compose-file  docker-compose.yml
+  145  docker stack deploy --compose-file docker-compose.yml php-app
+  146  docker stack ls
+  147  docker stack php-app ls
+  148  docker stack php-app ps
+  149  docker stack ps php-app
+  150  docker stack 
+  151  docker stack services app
+  152  docker stack services --help
+  153  docker stack sls --help
+  154  docker stack ls
+  155  docker stack ps php-app
+  156  clear
+  157  docker stack stop php-app
+  158  docker stack rm php-app
+  159  clear
+  160  pwd
+  161  clear
+  162  docker images
+  163  docker image prune -f
+  164  docker images
+  165  docker run -dp 3306 --name mysql-db \\n    -e MYSQL_ROOT_PASSWORD=root \\n    -e MYSQL_USER=vipin \\n    -e MYSQL_PASSWORD=vipin@123 \\n    -e MYSQL_DATABASE=testDb \\n    -v mysql-db:/var/lib/mysql \\n    mysql
+  166  docker run -dp 8080:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \ \n--name php-container \\nphp-app
+  167  docker run -dp 8080:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-app
+  168  docker ps
+  169  docker exec -it d33 bash
+  170  docker ps
+  171  docker exec -it 0ce bash
+  172  clear
+  173  docker ps
+  174  docker stop d33
+  175  docker run -dp 8080:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-app
+  176  docker ps
+  177  docker exec -it 5a9 bash
+  178  docker stop d5a
+  179  docker stop 5a
+  180  docker run -dp 8080:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-app
+  181  docker exec -it ca8 bash
+  182  clear
+  183  pwd
+  184  clear
+  185  cd php-app/
+  186  cd 2/php-app/php-code
+  187  ls
+  188  clear
+  189  docker build -t php-scr .
+  190  docker run -dp 80:80 php-scr
+  191  docker ps
+  192  docker exec -it 7b bash
+  193  docker ps
+  194  docker stop 7b
+  195  docker build -t php-scr .
+  196  docker run -dp 80:80 php-scr
+  197  docker exec -it df bash
+  198  docker ps
+  199  docker stop df
+  200  docker run -dp 8080:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-scr
+  201  docker run -dp 80:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-scr
+  202  docker ps
+  203  docker exec -it fa bash
+  204  docker ps
+  205  clear
+  206  pwd
+  207  clear
+  208  docker images
+  209  cd
+  210  ls
+  211  vi aaaa.sh
+  212  exec aaaa.sh
+  213  clear
+  214  pwd
+  215  clear
+  216  docker ps
+  217  clear
+  218  docker ps
+  219  docker exec -it fa bash
+  220  clear
+  221  docker exec -it fa bash
+  222  docker images
+  223  docker pull ubuntu:20.04
+  224  docker images
+  225  cd 2/php-app/php-code
+  226  ls
+  227  docker build -t php-scr-a .
+  228  docker ps
+  229  docker rm -f fa
+  230  docker run -dp 80:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-scr-a
+  231  docker ps
+  232  docker ps -a
+  233  docker logs 76
+  234  docker run -dp 80:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-scr-a /bin/bash
+  235  docker run -it -p 80:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-scr-a /bin/bash
+  236  docker build -t php-scr-a .
+  237  docker run -it -p 80:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-scr-a /bin/bash
+  238  systemctl status httpd
+  239  systemctl status nginx.service
+  240  clear
+  241  docker ps
+  242  docker exec -it mysql-db bash
+  243  docker ps
+  244  docker run -it -p 80:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-scr-a
+  245  docker ps
+  246  docker build -t php-scr-a .
+  247  docker run -it -p 80:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \\nphp-scr-a
+  248  clear
+  249  docker ps
+  250  docker build -t php-scr-alpine .
+  251  docker run -it --rm alpine sh
+  252  docker build -t php-scr-alpine .
+  253  docker images
+  254  docker image prune -f
+  255  docker images
+  256  docker ps
+  257  docker run -it --rm -p 80:80 php-scr-alpine
+  258  docker run -it --rm -p 80:80 php-scr-alpine /bin/sh
+  259  docker ps
+  260  docker exec -it dd bash
+  261  docker exec -it dd sh
+  262  docker build -t php-scr-alpine .
+  263  docker run -it --rm -p 80:80 php-scr-alpine
+  264  docker ps
+  265  docker exec -it d3f sh
+  266  docker build -t php-scr-alpine .
+  267  docker run -it --rm -p 80:80 php-scr-alpine
+  268  dockr ps
+  269  docker ps
+  270  docker exec -it ca3 sh
+  271  docker run -it --rm -p 80:80 php-scr-alpine
+  272  docker ps
+  273  docker exec -it 438 sh
+  274  ls
+  275  clear
+  276  df
+  277  df -h
+  278  clear
+  279  docker service ls
+  280  docker ps
+  281  docker images 
+  282  docker inspect php-scr-alpine
+  283  docker history php-scr-alpine
+  284  docker build -t php-scr-alpine .
+  285  docker history php-scr-alpine
+  286  docker images 
+  287  docker run -it --rm -p 80:80 php-scr-alpine
+  288  docker ps
+  289  docker exec -it b1c sh
+  290  clear
+  291  docker exec -it b1c sh
+  292  docker run -it --rm -p 80:80 php-scr-alpine
+  293  docker ps
+  294  docker exec -it b98 sh
+  295  docker build -t php-scr-alpine .
+  296  docker run -it --rm -p 80:80 php-scr-alpine
+  297  docker ps
+  298  docker logs cbd
+  299  docker exec -it cbd sh
+  300  clear
+  301  ls
+  302  cd ..
+  303  ls
+  304  pwd
+  305  cd .
+  306  cd ..
+  307  cd 3
+  308  cd ../3
+  309  ls
+  310  rm a b
+  311  mkdir a b
+  312  clear
+  313  ls
+  314  cd a
+  315  ls
+  316  docker-compose up
+  317  docker stop $(docker ps -q)
+  318  docker-compose up
+  319  docker ps
+  320  docker exec -it ce2 bash
+  321  docker-compose up
+  322  cd ../b
+  323  ls
+  324  cat command
+  325  docker stack deploy --compose-file docker-compose.yml php-app
+  326  docker stack ls
+  327  docker service ls
+  328  docker ps
+  329  docker exec -it cd6 bash
+  330  docker vvolumes ls
+  331  docker volumes ls
+  332  docker volume ls
+  333  docker system df
+  334  docker system df -v
+  335  docker image prune -f
+  336  docker system df
+  337  docker ps -a
+  338  docker rm -f $(docker ps -a | grep -v "jenkins\|mysql\|CONTAINER" | awk '{print $1}')
+  339  docker ps -a
+  340  docker rm -f $(docker ps -a | grep -v "jenkins\|CONTAINER" | awk '{print $1}')
+  341  docker ps -a
+  342  docker rm -f dad
+  343  docker ps
+  344  clear
+  345  docker system df 
+  346  df
+  347  df -h
+  348  clear
+  349  free
+  350  free -h
+  351  clear
+  352  cd ../a
+  353  ls
+  354  docker-compose up
+  355  docker ps
+  356  cd
+  357  l
+  358  cd .ssh
+  359  ls
+  360  cat authorized_keys
+  361  docker ps
+  362  clear
+  363  ls
+  364  clear
+  365  pwd
+  366  clear
+  367  ls
+  368  cd 3/b
+  369  lw
+  370  ls
+  371  docker-compose down
+  372  docker stack rm php-app
+  373  docker ps
+  374  docker ps -a
+  375  clear
+  376  cd ..
+  377  cd a
+  378  ls
+  379  docker-compose up
+  380  docker ps 
+  381  docker logs 2389
+  382  clear
+  383  docker-compose up
+  384  docker ps
+  385  docker-compose up
+  386  docker ps
+  387  docker ps -a
+  388  docker stop 2389
+  389  clear
+  390  docker ps -a
+  391  clear
+  392  docker-compose up
+  393  ls
+  394  cat docker-compose.yml
+  395  clear
+  396  docker-compose up
+  397  cd ../b
+  398  ls
+  399  docker-compose up
+  400  clear
+  401  cd ../a
+  402  ls
+  403  docker-compose up
+  404  clear
+  405  docker ps
+  406  docker exec -it 45 bash
+  407  clear
+  408  docker ps
+  409  cd wp
+  410  ls
+  411  docker-compose up
+  412  docker ps
+  413  docker-compose up
+  414  docker exec -it 7f bash
+  415  cleaar
+  416  clear
+  417  docker ps
+  418  docker exec -it 7f bash
+  419  clear
+  420  cd  ../3/a
+  421  ls
+  422  cat docker-compose.yml
+  423  docker-compose up
+  424  docker ps
+  425  docker exec -it 45f bash
+  426  docker-compose up
+  427  docker ps
+  428  docker exec -it ec0 bash
+  429  cd ../b
+  430  ls
+  431  docker-compose up
+  432  docker stack deploy --compose-file docker-compose.yml php-app
+  433  docker stack php-app ps
+  434  docker stack php-app ls
+  435  docker stack ls
+  436  docker stack ls php-app
+  437  docker service ls
+  438  docker ps
+  439  docker exec -it c13 bash
+  440  docker stack deploy --compose-file docker-compose.yml php-app
+  441  docker ps
+  442  docker exec -it 0c6 bash
+  443  docker stack rm php-app
+  444  docker run -dp 3306 --name mysql-db \\n    -e MYSQL_ROOT_PASSWORD=root \\n    -e MYSQL_USER=vipin \\n    -e MYSQL_PASSWORD=vipin@123 \\n    -e MYSQL_DATABASE=testDb \\n    -v mysql-db:/var/lib/mysql \\n    mysql
+  445  php-app container:\n\ndocker run -dp 8080:80 \\n--link mysql-db:mysql \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \ \n-v ./php-code:/var/www/html\n--name php-container php-app
+  446  \n\ndocker run -dp 8080:80 \\n--link mysql-db:mysql \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \ \n-v ./php-code:/var/www/html\n--name php-container php-app
+  447  docker run -dp 8080:80 \\n--link mysql-db:mysql \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb \ \n-v ./php-code:/var/www/html \\n--name php-container php-app
+  448  clear
+  449  docker run -dp 8080:80 \\n--link mysql-db:mysql \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb php-app
+  450  clear
+  451  docker ps
+  452  docker exec -it c7 bash
+  453  docker ps
+  454  docker rm -f c7b
+  455  docker run -dp 8080:80 \\n--link mysql-db:mysql-db \\n-e DB_SERVER=mysql-db \\n-e DB_USER=vipin \\n-e DB_PASSWORD=vipin@123 \\n-e DB_NAME=testDb php-app
+  456  docker ps
+  457  docker exec -it a7 bash
+  458  docker ps
+  459  docker exec -it 828 bash
+  460  docker ps
+  461  docker stop mysql-db
+  462  dokcer ps
+  463  docker ps
+  464  docker start mysql-db
+  465  docker rm -f $(docker ps -q)
+  466  docker ps
+  467  clear
+  468  docker-compose up
+  469  docker ps
+  470  docker exec -it 7bda bash
+  471  clear
+  472  docker ps
+  473  docker exec -it ec bash
+  474  docker ps
+  475  docker rm -f $(docker ps -q)
+  476  cd ../b
+  477  cd 3/b
+  478  ls
+  479  docker-compose up
+  480  cd ../a
+  481  ls
+  482  clear
+  483  docker-compose up
+  484  clear
+  485  docker ps
+  486  docker exec -it d7 bash
+  487  docker-compose up
+  488  docker volumes ls
+  489  docker volum
+  490  docker volume
+  491  docker volume ls
+  492  docker volume rm db_data
+  493  docker ps -a
+  494  docker rm adc 8a4 7ed 69b ce0 7f4
+  495  docker ps -a
+  496  docker volume ls
+  497  docker volume rm db_data
+  498  docker volume ls
+  499  clear
+  500  pwd
+  501  docker volume rm db_data
+  502  docker volume ls
+  503  docker volume rm db_data_a
+  504  docker-compose up
+  505  docker ps
+  506  docker exec -it d7 bash
+  507  docker exec -it bb18 bash
+  508  docker-compose up
+  509  cd ../b
+  510  ls
+  511  docker-compose up
+  512  docker volume rm db_data_b
+  513  docker ps -a
+  514  docker rm bb1 37a cf88 cba
+  515  docker rm bb1 37a cf88 cba -f
+  516  clear
+  517  docker volume rm db_data_b
+  518  docker stack deploy --compose-file docker-compose.yml php-app
+  519  docker stack rm php-app
+  520  cd ../a
+  521  docker-compose up -d
+  522  docker-compose down -d
+  523  docker-compose down 
+  524  docker-compose down -d
+  525  docker-compose up -d
+  526  docker-compose down 
+  527  docker-compose down -d
+  528  docker-compose up -d
+  529  clear
+  530  owd
+  531  pwd
+  532  clear
+  533  exit
+  534  clear
+  535  pwd
+  536  clear
+  537  ls
+  538  ./ifelse.sh
+  539  clear
+  540  cat cron-tab.txt
+  541  clear
+  542  ls
+  543  ls -la | grep zsh
+  544  cat .oh-my-zsh
+  545  cat .zshrc
+  546  cd .oh-my-zsh
+  547  ls
+  548  cat oh-my-zsh.sh
+  549  clear
+  550  pd
+  551  pwd
+  552  clear
+  553  exit
+  554  cd node-app
+  555  ls
+  556  clear
+  557  create-react-app
+  558  git clone https://github.com/ahfarmer/calculator.git
+  559  clear
+  560  ls
+  561  touch Dockerfile .dockerignore
+  562  ls
+  563  docker build -t react-calculator .
+  564  docker build -t react-calculator ./calculator
+  565  docker run -it react-calculator sh
+  566  docker build -t react-calculator ./calculator
+  567  docker history react-calculator
+  568  docker image ls
+  569  docker run -it react-calculator sh
+  570  docker run -it -p 8080:80 react-calculator
+  571  docker ps
+  572  docker run -it -p 8081:80 react-calculator
+  573  docker run -it -p 8081:80 react-calculator bash
+  574  docker image
+  575  docker image ls
+  576  docker image prune -f
+  577  docker volumes
+  578  docker volume
+  579  docker volume ls
+  580  docker volume prune 
+  581  docker volume ls
+  582  docker system df 
+  583  docker image prune -f
+  584  docker image ls
+  585  ls
+  586  git clone https://github.com/Yog9/SnapShot.git
+  587  clear
+  588  docker ps
+  589  docker build -t snap-shot ./SnapShot
+  590  docker run -it -p 8081:80 snap-shot
+  591  docker build -t snap-shot ./SnapShot
+  592  docker run -it -p 8081:80 snap-shot
+  593  docker image ls
+  594  docker history reasnap-shot
+  595  docker history snap-shot
+  596  docker inspect 87a94228f133
+  597  docker build -t snap-shot ./SnapShot
+  598  docker run  -dp 8081:80 snap-shot
+  599  docker image ls
+  600  docker history snap-shot
+  601  clear
+  602  docker ps
+  603  clear
+  604  docker ps
+  605  docker-compose up --help
+  606  docker-compose down --help
+  607  clear
+  608  docker ps
+  609  docker exec -it occ2 bash
+  610  docker ps
+  611  docker exec -it 0cc2 bash
+  612  docker ps -a
+  613  clear
+  614  cat ~/.zsh_history| grep grep
+  615  docker rm -f $(docker ps -a | grep -v "jenkins\|CONTAINER" | awk '{print $1}')
+  616  docker ps -a
+  617  clear
+  618  docker ps -a
+  619  clear
+  620  docker ps
+  621  docker container ls
+  622  docker container ls -a
+  623  docker run  -dp 8081:80 snap-shot
+  624  clear
+  625  lsb_release -a
+  626  clear
+  627  ls
+  628  cd node-app
+  629  ls
+  630  docker build -t snap-shot ./SnapShot
+  631  clear
+  632  docker images
+  633  docker image prune -f
+  634  docker images
+  635  docker run  -dp 8081:80 snap-shot
+  636  docker rm -f $(docker ps -a | grep -v "jenkins\|CONTAINER" | awk '{print $1}')
+  637  docker run  -dp 8081:80 snap-shot
+  638  docker tag --hrlp
+  639  docker tag --help
+  640  docker tag --help snap-app vipin0/snap-app
+  641  docker tag snap-app vipin0/snap-app
+  642  docker ima
+  643  docker images
+  644  docker tag snap-shot vipin0/snap-shot
+  645  docker images
+  646  docker push vipin0/snap-shot
+  647  clear
+  648  docker ps
+  649  docker rm -f $(docker ps -a | grep -v "jenkins\|CONTAINER" | awk '{print $1}')
+  650  docker build -t snap-shot ./SnapShot
+  651  docker run  -dp 8081:80 snap-shot
+  652  docker ps
+  653  docker logs a20
+  654  docker build -t snap-shot ./SnapShot
+  655  docker run  -dp 8081:80 snap-shot
+  656  clear
+  657  pwd
+  658  clear
+  659  docker ps
+  660  docker ps -a
+  661  docker inspect 2e12
+  662  clear
+  663  pwd
+  664  clear
+  665  ps -a
+  666  exit
+  667  which mysql
+  668  $?
+  669  #?
+  670  bash
+  671  free -h
+  672  df -h
+  673  docker ps
+  674  docker stop
+  675  docker ps -a
+  676  clear
+  677  docker rm -f $(docker ps -a | grep -v "jenkins\|CONTAINER" | awk '{print $1}')
+  678  clear
+  679  exit
+  680  echo git confit
+  681  echo git confif
+  682  git config
+  683  ls
+  684  cd
+  685  ls
+  686  ls -l
+  687  ls -la
+  688  cd .config
+  689  l
+  690  ls
+  691  cd htop
+  692  ls
+  693  ls -a
+  694  clear
+  695  exit
+  696  ls
+  697  clear
+  698  cd compiler
+  699  ;s
+  700  ls
+  701  pwd
+  702  clear
+  703  ls
+  704  git pull
+  705  git status
+  706  clear
+  707  ls
+  708  vi docker-compose.yml
+  709  docker-compose up
+  710  vi docker-compose.yml
+  711  docker-compose up
+  712  vi docker-compose.yml
+  713  docker-compose up
+  714  vi docker-compose.yml
+  715  docker-compose up
+  716  docker-compose up -d
+  717  docker ps
+  718  docker run -dp 5000:80 --rm nginx
+  719  docker ps
+  720  docker compose down -v
+  721  docker-compose down -v
+  722  docker ps
+  723  docker stop 5c
+  724  docker stop 6c
+  725  docker ps
+  726  cat docker-stack.yml
+  727  clear
+  728  vi docker-compose.yml
+  729  docker-compose up -d
+  730  docker ps
+  731  docker ps 
+  732  clear
+  733  htop
+  734  clear
+  735  exit
+  736  clear
+  737  pwd
+  738  clear
+  739  pwd
+  740  clear
+  741  /bin/python3 /home/ec2-user/github-repos.py
+  742  /bin/python3 /home/ec2-user/github-repos.py codaglobal
+  743  ls
+  744  cd slack_bot
+  745  python3 -m venv .venv
+  746  source .venv/bin/activate
+  747  cleat
+  748  clear
+  749  pip install slack_bolt dotenv
+  750  pip install slack_bolt
+  751  pip install dotenv
+  752  pip install python-dotenv
+  753  pip freeze
+  754  touch .env .env.sample .gitignore app.py README.md
+  755  clear
+  756  docker ps 
+  757  clear
+  758  python app.py
+  759  pip install flask
+  760  python app.py
+  761  source /home/ec2-user/assignments/slack_bot/.venv/bin/activate
+  762  ls
+  763  ps
+  764  python app.py
+  765  cd slack_bot
+  766  python app.py
+  767  ls
+  768  cd slack_bot
+  769  source .venv/bin/activate
+  770  pip install slackclient
+  771  clear
+  772  python bot.py
+  773  pip install slackeventapi
+  774  pip install slackeventsapi
+  775  python bot.py
+  776  source .venv/bin/activate
+  777  ls
+  778  python bot.py
+  779  clear
+  780  python bot.py
+  781  python
+  782  pip install requests
+  783  python bot.py
+  784  pip install tabulate
+  785  python bot.py
+  786  python
+  787  python bot.py
+  788  clear
+  789  python bot.py
+  790  ls
+  791  git clone https://github.com/vipin0/flight-tracker.git
+  792  git clone https://github.com/vipin0/filght-tracker.git
+  793  ls
+  794  cd fli
+  795  ls
+  796  rm -rf flight_
+  797  ls
+  798  exit
+  799  cd assignments
+  800  cd slack_bot
+  801  source .venv/bin/activate
+  802  python bot.py
+  803  ls
+  804  cd utils
+  805  ls
+  806  cd 
+  807  cd ut
+  808  cd utils
+  809  ls
+  810  cd -
+  811  ls
+  812  cd utils
+  813  ls
+  814  mv * ../
+  815  ls
+  816  cd ..
+  817  ls
+  818  python bot.py
+  819  cd ..
+  820  python bot.py
+  821  ps
+  822  bash
+  823  ls
+  824  bash
+  825  cleR
+  826  pkill vscode
+  827  ps -a
+  828  clear
+  829  exit
+  830  cd assignments/slack_bot
+  831  source .venv/bin/activate
+  832  l
+  833  cd utils
+  834  ls
+  835  mv airports.json airports.json.ORG
+  836  vi airports.json
+  837  ls
+  838  source .venv/bin/deactivate
+  839  exit
+  840  cd assignments/slack_bot
+  841  ls
+  842  python3 -m venv venv
+  843  source venv/bin/activate
+  844  ls
+  845  python bot.py
+  846  pip install slackeventsapi
+  847  python bot.py
+  848  pip install slackapi
+  849  python bot.py
+  850  pip install slack
+  851  pip install python-dotenv
+  852  pip install requests
+  853  pip install tabulate
+  854  pip freeze
+  855  pip freeze > requirements.txt
+  856  python bot.py
+  857  pip install slackclient
+  858  pip freeze > requirements.txt
+  859  python bot.py
+  860  clear
+  861  pwd
+  862  clear
+  863  ls
+  864  clear
+  865  ls
+  866  mv venv .venv ../
+  867  ls
+  868  cd ..
+  869  ls
+  870  cd ..
+  871  ls
+  872  cd assignments/slack_bot
+  873  ls
+  874  ls -a
+  875  ls
+  876  docker build -t flight_bot .
+  877  docker run --rm -p 4444:4444 flight_bot
+  878  docker build -t flight_bot .
+  879  docker run --rm -p 4444:4444 flight_bot
+  880  docker build -t flight_bot .
+  881  docker run --rm -p 4444:4444 flight_bot bash
+  882  docker run -p 4444:4444 flight_bot bash
+  883  docker ps
+  884  docker ps -a
+  885  docker logs 5b23
+  886  docker logs 5b23 -f
+  887  docker run -it -p 4444:4444 flight_bot bash
+  888  python bot.py
+  889  clear
+  890  cd ..
+  891  ls
+  892  exit
+  893  ls
+  894  cd assignments
+  895  ls
+  896  ls -l
+  897  ls -la
+  898  python -m venv .venv
+  899  python3 -m venv .venv
+  900  source .venv/bin/activate
+  901  ls
+  902  pip freeze
+  903  pip install slackclient slackeventsapi python-dotevn flask tabulate
+  904  pip install slackclient python-dotevn flask tabulate
+  905  pip install slackclient slackeventsapi python-dotenv flask tabulate
+  906  pip freeze
+  907  pip install slackclient slackeventsapi python-dotenv flask tabulate requests
+  908  cd slack_bot
+  909  python bot.py
+  910  pip freeze > requirements.txt
+  911  docker build -t flight_bot .
+  912  docker run -it -p 4444:4444 flight_bot bash
+  913  docker run -it -p 4444:4444 flight_bot
+  914  clear
+  915  docker run -dp 4444:4444 flight_bot
+  916  docker ps -a
+  917  cd ..
+  918  l
+  919  lw
+  920  cd ../compiler
+  921  l
+  922  lw
+  923  docker-compose up -d
+  924  docker os
+  925  docker ps
+  926  docker logs 3ed
+  927  docker logs 3ed -f
+  928  clear
+  929  source clear
+  930  clear
+  931  ;s
+  932  cd..
+  933  cd ..
+  934  ls
+  935  cd assignments/slack_bot
+  936  ls
+  937  docker stop 3ed
+  938  python bot.py
+  939  docker ps
+  940  ckear
+  941  clear
+  942  python bot.py
+  943  docker ps
+  944  python bot.py
+  945  docker ps -a
+  946  docker start 3ed
+  947  docker ps
+  948  docker logs 3ed -f
+  949  docker ps
+  950  clear
+  951  exit
+  952  cd assignments/slack_bot
+  953  docker ps
+  954  docker exec -it d5b bash
+  955  cd ..
+  956  source .venv/bin/activate
+  957  cd slack_bot
+  958  python flight_tracker.py lko
+  959  clear
+  960  docker exec -it d5b bash
+  961  docker ps -a
+  962  docker rm -f 636a4d759ae6 858f57957605
+  963  docker ps -a
+  964  clear
+  965  exit
+  966  cat .zsh_history| grep jenkins*
+  967  cleat
+  968  clear
+  969  exit
+  970  javac Main.java
+  971  java Main
+  972  javac Main.java
+  973  java Main
+  974  clear
+  975  ansible -i inventory -m ping ubuntu
+  976  chmod 400 aws-KP.pem
+  977  ansible -i inventory -m ping ubuntu
+  978  clear
+  979  pip3 install "ansible-lint[yamllint]"
+  980  clear
+  981  ansible-lint
+  982  clear
+  983  ansible-playbook -i inventory
+  984  ansible-playbook -i inventory debian_apache.yaml
+  985  cd ~/.ansible
+  986  ls
+  987  cd cp
+  988  ls
+  989  cd .
+  990  clear
+  991  vi /etc/ansible/ansible.cfg
+  992  sudo vi /etc/ansible/ansible.cfg
+  993  cd
+  994  cd ansible
+  995  ansible-playbook -i inventory debian_apache.yaml
+  996  chmod 400 vipin_ohio.pem
+  997  clear
+  998  chmod 400 vipin_ohio.pem
+  999  ansible-playbook -i inventory debian_apache.yaml
+ 1000  clear
+ 1001  ansible -m setup -i inventory ubuntu
+ 1002  clear
+ 1003  node
+ 1004  clear
+ 1005  rm -rf my-project
+ 1006  source .venv/bin/activate
+ 1007  ls
+ 1008  clear
+ 1009  pip3 install flask
+ 1010  pip3 install flask_sqlalchemy
+ 1011  ls
+ 1012  cd flask_db_test
+ 1013  python3 app.py
+ 1014  vi app.py
+ 1015  python3 app.py
+ 1016  clear
+ 1017  vi app1.py
+ 1018  pip3 install flask_mysql
+ 1019  python3 app1.py
+ 1020  pip3 install flask_mysqldb
+ 1021  sudo apt-get install python-dev default-libmysqlclient-dev libssl-dev
+ 1022  sudo yum install python-dev default-libmysqlclient-dev libssl-dev
+ 1023  sudo yum install -y mysql-devel
+ 1024  pip3 install flask_mysqldb
+ 1025  sudo yum install gcc
+ 1026  clear
+ 1027  sudo yum install - y mysql - devel
+ 1028  pip3 install mysql-connector
+ 1029  pip3 install flask_mysqldb
+ 1030  clear
+ 1031  pip install Flask-MySQLdb
+ 1032  pip3 install Flask-MySQLdb
+ 1033  pip3 install mysqlclient-1.3.13-cp27-cp27m-win32.whl
+ 1034  python3.7
+ 1035  python3.8
+ 1036  pip install flask-mysqldb
+ 1037  pip3 install flask-mysqldb
+ 1038  clear
+ 1039  pip3 install pymysql
+ 1040  vi app1.py
+ 1041  pip3 install wheel
+ 1042  sudo yum build-essential libssl-dev libffi-dev python3-devinstall - y mysql - devel
+ 1043  sudo yum build-essential libssl-dev libffi-dev python3-dev
+ 1044  sudo yum install build-essential libssl-dev libffi-dev python3-dev
+ 1045  clear
+ 1046  pip3 install mysqlclient‑1.4.6‑cp38‑cp38‑win32.whl 
+ 1047  pip install flask-mysql
+ 1048  pip3 install flask-mysql
+ 1049  vi app3.py
+ 1050  python3 app3.py
+ 1051  vi app3.py
+ 1052  python3 app3.py
+ 1053  clear
+ 1054  vi app3.py
+ 1055  python3 app3.py
+ 1056  vi app3.py
+ 1057  mysql -u myuser -p
+ 1058  mysql -u vipin -p
+ 1059  vi app3.py
+ 1060  mysql -u vipin -p
+ 1061  python3 app3.py
+ 1062  vi app3.py
+ 1063  python3 app3.py
+ 1064  vi app3.py
+ 1065  python3 app3.py
+ 1066  vi app3.py
+ 1067  python3 app3.py
+ 1068  vi app3.py
+ 1069  app=python3 app3.py >/dev/null 2>&1 &
+ 1070  jobs
+ 1071  python3 app3.py &
+ 1072  jobs
+ 1073  jobs 1
+ 1074  fg 1
+ 1075  fg 
+ 1076  jobs
+ 1077  curl -Lo ./kind "https://kind.sigs.k8s.io/dl/v0.11.1/kind-$(uname)-amd64"
+ 1078  ls
+ 1079  ls -l
+ 1080  chmod +x ./kind
+ 1081  ls
+ 1082  printenv
+ 1083  clear
+ 1084  mv kind /usr/bin
+ 1085  sudo mv kind /usr/bin
+ 1086  kind
+ 1087  cd
+ 1088  kind
+ 1089  clear
+ 1090  kind
+ 1091  clear
+ 1092  kind create cluster
+ 1093  kubectl cluster-info
+ 1094  kubectl cluster-info --context kind-kind
+ 1095  kind build node-image\nkind create cluster --image kindest/node:latest
+ 1096  $(go env GOPATH)/src/k8s.io/kubernetes
+ 1097  clear
+ 1098  kind get clusters
+ 1099  kubectl cluster-info --context kind-kind
+ 1100  bash
+ 1101  kind load docker-image nginx
+ 1102  kind 
+ 1103  kind nodes
+ 1104  kind nod
+ 1105  kind nodes
+ 1106  kind get nodes
+ 1107  kind get kubeconfig
+ 1108  kind completion
+ 1109  kind completion zsh
+ 1110  clear
+ 1111  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+ 1112  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+ 1113  kubectl version --client
+ 1114  kubectl get nodes
+ 1115  kubectl get pods
+ 1116  kubectl get deployments
+ 1117  kubectl get deployment
+ 1118  kubectl create deployment nginx-depl --image=nginx --replicas=2
+ 1119  kubectl get deployment
+ 1120  kubectl get pods
+ 1121  clea
+ 1122  clear
+ 1123  kubectl cluster-info
+ 1124  kubectl cluster-info --context kind-kind
+ 1125  clear
+ 1126  kubectl cluster-info --context kind-kind
+ 1127  clear
+ 1128  cd kubernetes/staticweb
+ 1129  docker build -t webapp .
+ 1130  docker run -p 4444:80 webapp
+ 1131  clear
+ 1132  docker run -dp 4444:80 webapp
+ 1133  docker exec -it 3f bash
+ 1134  clear
+ 1135  mkdir html
+ 1136  cd html
+ 1137  git clone https://github.com/cloudacademy/static-website-example.git
+ 1138  ls
+ 1139  cd static-website-example
+ 1140  ls
+ 1141  cp -r * ../
+ 1142  ls
+ 1143  cd ..
+ 1144  ls
+ 1145  rm -rf static-website-example
+ 1146  clear
+ 1147  ls
+ 1148  cd 
+ 1149  cd kubernetes/staticweb
+ 1150  ls
+ 1151  docker build -t webapp .
+ 1152  docker run -dp 4444:80 webapp
+ 1153  docker ps
+ 1154  docker rm 3f -f
+ 1155  clear
+ 1156  docker run --rm -p --it 4444:80 webapp bash
+ 1157  docker run --rm -it -p 4444:80 webapp bash
+ 1158  docker run --rm -p --it 4444:80 webapp
+ 1159  docker run --rm -p  4444:80 webapp
+ 1160  clear
+ 1161  pwd
+ 1162  clear
+ 1163  pwd
+ 1164  clear
+ 1165  pwd
+ 1166  clear
+ 1167  free -h
+ 1168  tail
+ 1169  clear
+ 1170  docker ps
+ 1171  clear
+ 1172  docker ps
+ 1173  docker images
+ 1174  docker tag webapp vipin0/webapp:latest
+ 1175  docker images
+ 1176  kubectl apply -f nginx-deployment.yaml
+ 1177  kubectl get pods
+ 1178  kubectl delete deployment nginx-depl
+ 1179  kubectl get pods
+ 1180  kubectl apply -f nginx-deployment.yaml
+ 1181  kubectl get pods
+ 1182  kubectl describe pod webapp-54d7794df5-96qsf
+ 1183  clear
+ 1184  kubectl get pods
+ 1185  kubectl delete pod webapp-69db9db67c*
+ 1186  kubectl get pods
+ 1187  kubectl delete pod webapp-69db9db67c-f82xb
+ 1188  kubectl delete pod webapp-69db9db67c-schpq
+ 1189  kubectl get pods
+ 1190  kubectl get deployment
+ 1191  kubectl delete deployment webapp
+ 1192  kubectl get pods
+ 1193  kubectl apply -f nginx-deployment.yaml
+ 1194  kubectl get pods
+ 1195  docker push vipin0/webapp
+ 1196  kubectl apply -f nginx-deployment.yaml
+ 1197  kubectl get pods
+ 1198  kubectl delete deployment webapp
+ 1199  kubectl get pods
+ 1200  kubectl apply -f nginx-deployment.yaml
+ 1201  kubectl get pods
+ 1202  kubectl apply -f nginx-deployment.yaml
+ 1203  kubectl get pods
+ 1204  kind load docker-image vipin0/webapp:latest
+ 1205  kubectl get pods
+ 1206  kubectl apply -f nginx-deployment.yaml
+ 1207  kubectl get pods
+ 1208  kubectl exec -it webapp-5fc446868f-f44kn -- bash
+ 1209  kubectl get svc
+ 1210  kubectl get pods
+ 1211  kubectl describe pod webapp-5fc446868f-f44kn
+ 1212  clear
+ 1213  kubectl get svc
+ 1214  curl 10.96.0.1
+ 1215  clear
+ 1216  ls
+ 1217  clear
+ 1218  ls
+ 1219  kubectl get pods
+ 1220  kubectl get nodes
+ 1221  kubectl create service --type=nodeport --targetPort=80 --port=80
+ 1222  kubectl create service --help
+ 1223  kubectl create service nodeport --targetPort=80 --port=80
+ 1224  kubectl create service myc --type=nodeport --targetPort=80 --port=80
+ 1225  kubectl export
+ 1226  kubectl expose
+ 1227  kubectl expose -h
+ 1228  kubectl expose deployment webapp --port=80 --target=80
+ 1229  kubectl expose deployment webapp --port=80 --target-port=80
+ 1230  kubectl get svc
+ 1231  kubectl expose deployment webapp --port=80 --target-port=80 --type=nodePort
+ 1232  kubectl expose deployment webapp --port=80 --target-port=80 --type=nodeport
+ 1233  kubectl expose deployment webapp --port=80 --target-port=80 --type=NodePort
+ 1234  kubectl delete service webapp
+ 1235  kubectl expose deployment webapp --port=80 --target-port=80 --type=NodePort
+ 1236  kubectl get svc
+ 1237  curl 10.96.27.133:31000
+ 1238  curl 127.0.0.1:31000
+ 1239  curl 127.0.0.1:80
+ 1240  sudo service https stop
+ 1241  sudo systemctl status httpd
+ 1242  sudo systemctl stop httpd
+ 1243  curl 127.0.0.1:80
+ 1244  clear
+ 1245  sh
+ 1246  clear
+ 1247  pwd
+ 1248  clear
+ 1249  nginx
+ 1250  clear
+ 1251  kind create cluster --config=cluster.yaml
+ 1252  l
+ 1253  cd ..
+ 1254  kind create cluster --config=cluster.yaml
+ 1255  kind 
+ 1256  kind delete 
+ 1257  kind delete kind
+ 1258  kind clusters
+ 1259  kind delete --help
+ 1260  kind delete cluster kind
+ 1261  kind delete kind
+ 1262  clear
+ 1263* kind get clusters
+ 1264* kind delete kind
+ 1265* kind delete clusters
+ 1266* kind delete clusters kind
+ 1267* kind get clusters
+ 1268  kind create cluster --config=cluster.yaml
+ 1269  kubectl apply -f a.yaml
+ 1270  clear
+ 1271  kind create cluster --config=a.yaml
+ 1272  kind delete clusters kind
+ 1273  kind create cluster --config=a.yaml
+ 1274  clear
+ 1275  docker ps
+ 1276  kubectl apply -f staticweb/nginx-deployment.yaml
+ 1277  kubectl get pods
+ 1278  kind load docker-image vipin0/webapp:latest
+ 1279  kubectl get pods
+ 1280  kubectl get svc
+ 1281  kubectl get pods
+ 1282  kubectl get deployment
+ 1283  kubectl expose deployment webapp --port=80 --target-port=80 --type=NodePort
+ 1284  kubectl get svc
+ 1285  curl 127.0.0.1:31421
+ 1286  clear
+ 1287  kubectl describe pod webapp-5fc446868f-f44kn
+ 1288  kubectl describe deployment webapp
+ 1289  kubectl apply -f staticweb/nginx-deployment.yaml
+ 1290  kubectl describe deployment webapp
+ 1291  kubectl get svc
+ 1292  curl 127.0.0.1:31421
+ 1293  curl 127.0.0.1:4444
+ 1294  clear
+ 1295  curl 127.0.0.1:4444
+ 1296  clear
+ 1297  kind delete clusters kind
+ 1298  kind create cluster --config=https://kind.sigs.k8s.io/examples/config-with-port-mapping.yaml
+ 1299  kind create cluster --config=a.yaml
+ 1300  kind delete clusters kind
+ 1301  kind create cluster --config=a.yaml
+ 1302  docker ps
+ 1303  clear
+ 1304  kubectl apply -f staticweb/nginx-deployment.yaml
+ 1305  kind load docker-image vipin0/webapp:latest
+ 1306  kubectl apply -f staticweb/nginx-deployment.yaml
+ 1307  kubectl describe deployment webapp
+ 1308  kubectl get svc
+ 1309  kubectl apply -f staticweb/nginx-deployment.yaml
+ 1310  kubectl expose deployment webapp --port=80 --target-port=80 --type=NodePort
+ 1311  kubectl get svc
+ 1312  curl 127.0.0.1
+ 1313  curl 127.0.0.1:443
+ 1314  curl 127.0.0.1:32157
+ 1315  curl 0.0.0.0
+ 1316  clear
+ 1317  pwd
+ 1318  clear
+ 1319  kind delete clusters kind
+ 1320  clear
+ 1321  kind create cluster --config=cluster.yaml
+ 1322  clea
+ 1323  clear
+ 1324  kind get clusters
+ 1325  kind get node
+ 1326  kind get nodes
+ 1327  clear
+ 1328  kubectl get nodes
+ 1329  clear
+ 1330  kubectl apply -f staticweb/nginx-deployment.yaml
+ 1331  kubectl expose deployment webapp --port=80 --type=NodePort
+ 1332  kind load docker-image vipin0/webapp:latest
+ 1333  du -h
+ 1334  df -h
+ 1335  kind delete clusters kind
+ 1336  kind create cluster --config=cluster.yaml
+ 1337* df -h
+ 1338* clear
+ 1339* docker images
+ 1340* docker image prune -f
+ 1341* docker images
+ 1342* docker image rm
+ 1343* docker image rm kind: Cluster\napiVersion: kind.x-k8s.io/v1alpha4\nnodes:\n- role: control-plane\n- role: worker\n- role: workerclear
+ 1344* cleae
+ 1345* clear
+ 1346* docker rmi nginx
+ 1347* docker rmi $(docker image ls -aq | grep "*java-mvn*")
+ 1348* docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}' | grep '*java-mvn*')
+ 1349* docker images --format '{{.Repository}}:{{.Tag}}'
+ 1350* docker images --format '{{.Repository}}:{{.Tag}}' | grep '*java-mvn*'
+ 1351* docker images --format '{{.Repository}}:{{.Tag}}' | grep 'java'
+ 1352* docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}' | grep 'java')
+ 1353* clear
+ 1354* docker images
+ 1355* df -h
+ 1356  kind load docker-image vipin0/webapp:latest
+ 1357  kubectl apply -f staticweb/nginx-deployment.yaml
+ 1358  kubectl expose deployment webapp --port=80 --type=NodePort
+ 1359  kubectl get nodes -o wide
+ 1360  kubectl get svc
+ 1361  curl 172.22.0.2:30044
+ 1362  clear
+ 1363  curl 172.22.0.2:30044
+ 1364  clear
+ 1365  kubectl expose deployment webapp --port=80 --type=LoadBalancer
+ 1366  kubectl expose deployment webapp1 --port=80 --type=LoadBalancer
+ 1367  kubectl delete service webapp
+ 1368  kubectl expose deployment webapp --port=80 --type=LoadBalancer
+ 1369  kubectl get svc
+ 1370  clear
+ 1371  kubectl get svc
+ 1372  kubectl delete service webapp
+ 1373  kubectl expose deployment webapp --port=80 --type=NodePort
+ 1374  kubectl delete service webapp
+ 1375  kubectl apply -f staticweb/nginx-deployment.yaml
+ 1376  kubectl get svc
+ 1377  curl 172.22.0.2:30696
+ 1378  clear
+ 1379  kubectl get pod -o wide 
+ 1380  kubectl get node -o wide 
+ 1381  curl 172.22.0.2:30696
+ 1382  clear
+ 1383  curl 172.22.0.2:30696
+ 1384  kubectl describe service webapp
+ 1385  kubectl delete service webapp
+ 1386  kubectl expose deployment webapp --port=80 --type=NodePort
+ 1387  kubectl describe service webapp
+ 1388  kubectl edit
+ 1389  kubectl edit service webapp
+ 1390  clear
+ 1391  curl 172.22.0.2:30696
+ 1392  kubectl get svc
+ 1393  curl 172.22.0.2:31410
+ 1394  clear
+ 1395  kubectl port-forward webapp 33069:80
+ 1396  clear
+ 1397  kubectl port-forward svc/webapp 33069:80
+ 1398  kubectl port-forward svc/webapp 31410:80 
+ 1399* curl localhost
+ 1400* curl 127.0.0.1
+ 1401* curl 0.0.0.0
+ 1402* sudo visudo
+ 1403* grups
+ 1404* groups
+ 1405* clear
+ 1406* kubectl describe service webapp
+ 1407* history
+ 1408* clear
+ 1409* groups
+ 1410* sudo su
+ 1411* clear
+ 1412* docker --version
+ 1413* cat /etc/groups
+ 1414* cat /etc/passwd
+ 1415* clear
+ 1416* kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/usage.yaml
+ 1417* kubectl get svc
+ 1418* free -h
+ 1419* type
+ 1420* clear
+ 1421* power
+ 1422* clear
+ 1423* pwd
+ 1424* clear
+ 1425* curl 0.0.0.0/foo
+ 1426* curl localhost/foo
+ 1427* cat <<EOF | kind create cluster --config=-\nkind: Cluster\napiVersion: kind.x-k8s.io/v1alpha4\nnodes:\n- role: control-plane\n  kubeadmConfigPatches:\n  - |\n    kind: InitConfiguration\n    nodeRegistration:\n      kubeletExtraArgs:\n        node-labels: "ingress-ready=true"\n  extraPortMappings:\n  - containerPort: 80\n    hostPort: 80\n    protocol: TCP\n  - containerPort: 443\n    hostPort: 443\n    protocol: TCP\nEOF
+ 1428* kind delete clusters kind
+ 1429* cat <<EOF | kind create cluster --config=-\nkind: Cluster\napiVersion: kind.x-k8s.io/v1alpha4\nnodes:\n- role: control-plane\n  kubeadmConfigPatches:\n  - |\n    kind: InitConfiguration\n    nodeRegistration:\n      kubeletExtraArgs:\n        node-labels: "ingress-ready=true"\n  extraPortMappings:\n  - containerPort: 80\n    hostPort: 80\n    protocol: TCP\n  - containerPort: 443\n    hostPort: 443\n    protocol: TCP\nEOF
+ 1430* kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/usage.yaml
+ 1431* curl localhost/foo
+ 1432* kubectl get svc
+ 1433* clear
+ 1434* kind delete clusters kind
+ 1435* ls
+ 1436* kind create cluster --config=cluster.yaml

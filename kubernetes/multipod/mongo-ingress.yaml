@@ -5,6 +5,7 @@ metadata:
   labels:
     name: mongo-ingress
 spec:
+  ingressClassName: nginx
   rules:
   - http:
       paths:
